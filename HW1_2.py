@@ -10,7 +10,6 @@
 
 import string
 import subprocess
-import re
 
 
 def check_command_output(command, text):
