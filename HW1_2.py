@@ -8,23 +8,3 @@
 # (их можно взять из списка string.punctuation модуля string).
 # В этом режиме должно проверяться наличие слова в выводе.
 
-import string
-import subprocess
-
-
-def check_command_output(command, text):
-    try:
-        output = subprocess.check_output(command, shell=True, universal_newlines=True)
-        print(output)
-        translator = str.maketrans("", "", string.punctuation)
-        output = output.translate(translator)
-        print(output)
-        return text in output
-    except(subprocess.CalledProcessError, FileNotFoundError):
-        return False
-
-
-command = "ls"
-text = "HW1py"
-result = check_command_output(command, text)
-print(result)
