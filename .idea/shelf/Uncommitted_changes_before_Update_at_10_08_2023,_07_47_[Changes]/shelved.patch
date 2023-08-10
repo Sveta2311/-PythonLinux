@@ -1,0 +1,49 @@
+Index: HW1_2.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Написать функцию на Python, которой передаются в качестве параметров команда и текст. Функция должна возвращать True,\n# если команда успешно выполнена и текст найден в ее выводе и False в противном случае. Передаваться должна только одна\n# строка, разбиение вывода использовать не нужно.\n\n# Доработать функцию из предыдущего задания таким образом,\n# чтобы у неё появился дополнительный режим работы,\n# в котором вывод разбивается на слова с удалением всех знаков пунктуации\n# (их можно взять из списка string.punctuation модуля string).\n# В этом режиме должно проверяться наличие слова в выводе.\n\nimport string\nimport subprocess\n\n\ndef check_command_output(command, text):\n    try:\n        output = subprocess.check_output(command, shell=True, universal_newlines=True)\n        print(output)\n        translator = str.maketrans(\"\", \"\", string.punctuation)\n        output = output.translate(translator)\n        print(output)\n        return text in output\n    except(subprocess.CalledProcessError, FileNotFoundError):\n        return False\n\n\ncommand = \"ls\"\ntext = \"HW1py\"\nresult = check_command_output(command, text)\nprint(result)\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/HW1_2.py b/HW1_2.py
+--- a/HW1_2.py	(revision 9ba635484aae532396cd108d95dc4b57395939ac)
++++ b/HW1_2.py	(date 1691642834818)
+@@ -8,23 +8,3 @@
+ # (их можно взять из списка string.punctuation модуля string).
+ # В этом режиме должно проверяться наличие слова в выводе.
+ 
+-import string
+-import subprocess
+-
+-
+-def check_command_output(command, text):
+-    try:
+-        output = subprocess.check_output(command, shell=True, universal_newlines=True)
+-        print(output)
+-        translator = str.maketrans("", "", string.punctuation)
+-        output = output.translate(translator)
+-        print(output)
+-        return text in output
+-    except(subprocess.CalledProcessError, FileNotFoundError):
+-        return False
+-
+-
+-command = "ls"
+-text = "HW1py"
+-result = check_command_output(command, text)
+-print(result)
+Index: .idea/pythonProject.iml
+===================================================================
+diff --git a/.idea/pythonProject.iml b/.idea/pythonProject.iml
+deleted file mode 100644
+--- a/.idea/pythonProject.iml	(revision 9ba635484aae532396cd108d95dc4b57395939ac)
++++ /dev/null	(revision 9ba635484aae532396cd108d95dc4b57395939ac)
+@@ -1,7 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module version="4">
+-  <component name="PyDocumentationSettings">
+-    <option name="format" value="PLAIN" />
+-    <option name="myDocStringFormat" value="Plain" />
+-  </component>
+-</module>
+\ No newline at end of file
