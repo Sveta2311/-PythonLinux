@@ -5,20 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f372dc5b-b3a9-4abe-9d52-119f3d9f34ae" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
-      <change afterPath="$PROJECT_DIR$/lesson3/checkers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/pytest.init" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/stat.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson3/test_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW4/checkers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW4/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW4/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW4/log1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW4/log10.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW4/log2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW4/log3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW4/log4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW4/log5.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW4/log6.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW4/log7.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW4/log8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW4/log9.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW4/sshcheckers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW4/test_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW4/test_2.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lesson4/config.yaml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lesson4/conftest.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lesson4/deploy.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lesson4/deploy_1.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lesson4/sshcheckers.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lesson4/test_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2023,_07_47_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_08_2023__07_47__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,6 +88,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/HW4" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.deploy_1">
     <configuration name="deploy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject" />
@@ -165,20 +178,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_1.py (1)" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="pythonProject" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lesson4" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/lesson4/test_1.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests in test_1.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -193,10 +192,23 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests in test_1.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lesson4" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/lesson4/test_1.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.deploy_1" />
-        <item itemvalue="Python tests.Python tests in test_1.py (1)" />
         <item itemvalue="Python.deploy" />
         <item itemvalue="Python tests.Python tests in test_1.py" />
         <item itemvalue="Python.f_2" />
@@ -300,7 +312,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691959551795</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Merge remote-tracking branch 'origin/main'">
+      <option name="closed" value="true" />
+      <created>1692391564717</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1692391564717</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -1,0 +1,138 @@
+авг 22 00:17:01 userpc sshd[44310]: Accepted password for user2 from 127.0.0.1 port 45062 ssh2
+авг 22 00:17:01 userpc sshd[44310]: pam_unix(sshd:session): session opened for user user2(uid=1001) by (uid=0)
+авг 22 00:17:01 userpc systemd-logind[621]: New session 774 of user user2.
+авг 22 00:17:01 userpc audit[591]: USER_AVC pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionNew" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                       exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:01 userpc systemd[1]: Started Session 774 of User user2.
+авг 22 00:17:01 userpc sshd[44310]: pam_unix(sshd:session): session closed for user user2
+авг 22 00:17:01 userpc systemd[1]: session-774.scope: Deactivated successfully.
+авг 22 00:17:01 userpc systemd-logind[621]: Session 774 logged out. Waiting for processes to exit.
+авг 22 00:17:01 userpc systemd-logind[621]: Removed session 774.
+авг 22 00:17:01 userpc audit[591]: USER_AVC pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionRemoved" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                       exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:01 userpc sshd[44353]: Accepted password for user2 from 127.0.0.1 port 45072 ssh2
+авг 22 00:17:01 userpc CRON[44356]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+авг 22 00:17:01 userpc CRON[44357]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+авг 22 00:17:01 userpc sshd[44353]: pam_unix(sshd:session): session opened for user user2(uid=1001) by (uid=0)
+авг 22 00:17:01 userpc CRON[44356]: pam_unix(cron:session): session closed for user root
+авг 22 00:17:01 userpc systemd-logind[621]: New session 776 of user user2.
+авг 22 00:17:01 userpc audit[591]: USER_AVC pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionNew" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                       exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:01 userpc systemd[1]: Started Session 776 of User user2.
+авг 22 00:17:01 userpc sshd[44353]: pam_unix(sshd:session): session closed for user user2
+авг 22 00:17:01 userpc systemd[1]: session-776.scope: Deactivated successfully.
+авг 22 00:17:01 userpc systemd-logind[621]: Session 776 logged out. Waiting for processes to exit.
+авг 22 00:17:01 userpc systemd-logind[621]: Removed session 776.
+авг 22 00:17:01 userpc audit[591]: USER_AVC pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionRemoved" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                       exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:01 userpc sshd[44399]: Accepted password for user2 from 127.0.0.1 port 45082 ssh2
+авг 22 00:17:01 userpc sshd[44399]: pam_unix(sshd:session): session opened for user user2(uid=1001) by (uid=0)
+авг 22 00:17:01 userpc audit[591]: USER_AVC pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionNew" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                       exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:01 userpc systemd-logind[621]: New session 777 of user user2.
+авг 22 00:17:01 userpc systemd[1]: Started Session 777 of User user2.
+авг 22 00:17:01 userpc sshd[44399]: pam_unix(sshd:session): session closed for user user2
+авг 22 00:17:01 userpc systemd-logind[621]: Session 777 logged out. Waiting for processes to exit.
+авг 22 00:17:01 userpc systemd[1]: session-777.scope: Deactivated successfully.
+авг 22 00:17:01 userpc systemd-logind[621]: Removed session 777.
+авг 22 00:17:01 userpc audit[591]: USER_AVC pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionRemoved" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                       exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:01 userpc sshd[44441]: Accepted password for user2 from 127.0.0.1 port 45086 ssh2
+авг 22 00:17:01 userpc sshd[44441]: pam_unix(sshd:session): session opened for user user2(uid=1001) by (uid=0)
+авг 22 00:17:01 userpc systemd-logind[621]: New session 778 of user user2.
+авг 22 00:17:01 userpc audit[591]: USER_AVC pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionNew" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                       exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:01 userpc systemd[1]: Started Session 778 of User user2.
+авг 22 00:17:01 userpc sshd[44441]: pam_unix(sshd:session): session closed for user user2
+авг 22 00:17:01 userpc systemd[1]: session-778.scope: Deactivated successfully.
+авг 22 00:17:01 userpc systemd-logind[621]: Session 778 logged out. Waiting for processes to exit.
+авг 22 00:17:01 userpc systemd-logind[621]: Removed session 778.
+авг 22 00:17:01 userpc audit[591]: USER_AVC pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionRemoved" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                       exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:01 userpc sshd[44483]: Accepted password for user2 from 127.0.0.1 port 45088 ssh2
+авг 22 00:17:02 userpc sshd[44483]: pam_unix(sshd:session): session opened for user user2(uid=1001) by (uid=0)
+авг 22 00:17:02 userpc systemd-logind[621]: New session 779 of user user2.
+авг 22 00:17:02 userpc audit[591]: USER_AVC pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionNew" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                       exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:02 userpc systemd[1]: Started Session 779 of User user2.
+авг 22 00:17:02 userpc sshd[44483]: pam_unix(sshd:session): session closed for user user2
+авг 22 00:17:02 userpc systemd[1]: session-779.scope: Deactivated successfully.
+авг 22 00:17:02 userpc systemd-logind[621]: Session 779 logged out. Waiting for processes to exit.
+авг 22 00:17:02 userpc systemd-logind[621]: Removed session 779.
+авг 22 00:17:02 userpc audit[591]: USER_AVC pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionRemoved" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                       exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:02 userpc kernel: kauditd_printk_skb: 24 callbacks suppressed
+авг 22 00:17:02 userpc kernel: audit: type=1107 audit(1692652622.719:315): pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionRemoved" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                   exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:02 userpc sshd[44528]: Accepted password for user2 from 127.0.0.1 port 45102 ssh2
+авг 22 00:17:02 userpc sshd[44528]: pam_unix(sshd:session): session opened for user user2(uid=1001) by (uid=0)
+авг 22 00:17:02 userpc systemd-logind[621]: New session 780 of user user2.
+авг 22 00:17:02 userpc audit[591]: USER_AVC pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionNew" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                       exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:02 userpc kernel: audit: type=1107 audit(1692652622.803:316): pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionNew" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                   exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:02 userpc systemd[1]: Started Session 780 of User user2.
+авг 22 00:17:02 userpc sshd[44528]: pam_unix(sshd:session): session closed for user user2
+авг 22 00:17:02 userpc systemd[1]: session-780.scope: Deactivated successfully.
+авг 22 00:17:02 userpc systemd-logind[621]: Session 780 logged out. Waiting for processes to exit.
+авг 22 00:17:02 userpc systemd-logind[621]: Removed session 780.
+авг 22 00:17:02 userpc audit[591]: USER_AVC pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionRemoved" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                       exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:02 userpc kernel: audit: type=1107 audit(1692652622.919:317): pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionRemoved" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                   exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:03 userpc sshd[44569]: Accepted password for user2 from 127.0.0.1 port 45112 ssh2
+авг 22 00:17:03 userpc sshd[44569]: pam_unix(sshd:session): session opened for user user2(uid=1001) by (uid=0)
+авг 22 00:17:03 userpc systemd-logind[621]: New session 781 of user user2.
+авг 22 00:17:03 userpc audit[591]: USER_AVC pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionNew" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                       exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:03 userpc kernel: audit: type=1107 audit(1692652623.031:318): pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionNew" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                   exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:03 userpc systemd[1]: Started Session 781 of User user2.
+авг 22 00:17:03 userpc sshd[44569]: pam_unix(sshd:session): session closed for user user2
+авг 22 00:17:03 userpc systemd[1]: session-781.scope: Deactivated successfully.
+авг 22 00:17:03 userpc systemd-logind[621]: Session 781 logged out. Waiting for processes to exit.
+авг 22 00:17:03 userpc systemd-logind[621]: Removed session 781.
+авг 22 00:17:03 userpc audit[591]: USER_AVC pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionRemoved" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                       exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:03 userpc kernel: audit: type=1107 audit(1692652623.147:319): pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionRemoved" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                   exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:03 userpc sshd[44614]: Accepted password for user2 from 127.0.0.1 port 45114 ssh2
+авг 22 00:17:03 userpc sshd[44614]: pam_unix(sshd:session): session opened for user user2(uid=1001) by (uid=0)
+авг 22 00:17:03 userpc systemd-logind[621]: New session 782 of user user2.
+авг 22 00:17:03 userpc audit[591]: USER_AVC pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionNew" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                       exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:03 userpc kernel: audit: type=1107 audit(1692652623.267:320): pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionNew" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                   exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:03 userpc systemd[1]: Started Session 782 of User user2.
+авг 22 00:17:03 userpc sshd[44614]: pam_unix(sshd:session): session closed for user user2
+авг 22 00:17:03 userpc systemd[1]: session-782.scope: Deactivated successfully.
+авг 22 00:17:03 userpc systemd-logind[621]: Session 782 logged out. Waiting for processes to exit.
+авг 22 00:17:03 userpc systemd-logind[621]: Removed session 782.
+авг 22 00:17:03 userpc audit[591]: USER_AVC pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionRemoved" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                       exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:03 userpc kernel: audit: type=1107 audit(1692652623.371:321): pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionRemoved" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                   exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:03 userpc sshd[44657]: Accepted password for user2 from 127.0.0.1 port 45130 ssh2
+авг 22 00:17:03 userpc sshd[44657]: pam_unix(sshd:session): session opened for user user2(uid=1001) by (uid=0)
+авг 22 00:17:03 userpc systemd-logind[621]: New session 783 of user user2.
+авг 22 00:17:03 userpc audit[591]: USER_AVC pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionNew" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                       exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:03 userpc kernel: audit: type=1107 audit(1692652623.479:322): pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionNew" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                   exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:03 userpc systemd[1]: Started Session 783 of User user2.
+авг 22 00:17:03 userpc sshd[44657]: pam_unix(sshd:session): session closed for user user2
+авг 22 00:17:03 userpc systemd[1]: session-783.scope: Deactivated successfully.
+авг 22 00:17:03 userpc systemd-logind[621]: Session 783 logged out. Waiting for processes to exit.
+авг 22 00:17:03 userpc systemd-logind[621]: Removed session 783.
+авг 22 00:17:03 userpc audit[591]: USER_AVC pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionRemoved" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                       exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:03 userpc kernel: audit: type=1107 audit(1692652623.599:323): pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionRemoved" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                   exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:03 userpc sshd[44699]: Accepted password for user2 from 127.0.0.1 port 45146 ssh2
+авг 22 00:17:03 userpc sshd[44699]: pam_unix(sshd:session): session opened for user user2(uid=1001) by (uid=0)
+авг 22 00:17:03 userpc systemd-logind[621]: New session 784 of user user2.
+авг 22 00:17:03 userpc audit[591]: USER_AVC pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionNew" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                       exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:03 userpc kernel: audit: type=1107 audit(1692652623.707:324): pid=591 uid=102 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_signal"  bus="system" path="/org/freedesktop/login1" interface="org.freedesktop.login1.Manager" member="SessionNew" name=":1.2" mask="receive" pid=35997 label="snap.firefox.firefox" peer_pid=621 peer_label="unconfined"
+                                   exe="/usr/bin/dbus-daemon" sauid=102 hostname=? addr=? terminal=?'
+авг 22 00:17:03 userpc systemd[1]: Started Session 784 of User user2.

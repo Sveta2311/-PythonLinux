@@ -1,0 +1,2 @@
+авг 22 00:17:10 userpc sshd[45715]: pam_unix(sshd:session): session closed for user user2
+авг 22 00:17:10 userpc systemd[1]: session-808.scope: Deactivated successfully.

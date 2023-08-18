@@ -1,0 +1,189 @@
+Index: lesson4/test_1.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lesson4/test_1.py b/lesson4/test_1.py
+new file mode 100644
+--- /dev/null	(date 1692388713764)
++++ b/lesson4/test_1.py	(date 1692388713764)
+@@ -0,0 +1,29 @@
++from sshcheckers import ssh_checkout, upload_files
++import yaml
++
++with open('config.yaml') as f:
++    # читаем документ YAML
++    data = yaml.safe_load(f)
++
++
++class TestPositive:
++    #def test_step1(self):
++        #res = []
++        #upload_files(data.get("ip"), data.get("user"), data.get("passwd"), data.get("local_path"), data.get("remote_path"))
++        #res.append(ssh_checkout(data.get("ip"), data.get("user"), data.get("passwd"), f"echo {data.get('passwd')} | sudo -S dpkg -i {data.get('remote_path')}",
++                                #"Настраивается пакет"))
++        #res.append(ssh_checkout(data.get("ip"), data.get("user"), data.get("passwd"), f"echo {data.get('passwd')} | sudo -S dpkg -s p7zip-full",
++                                #"Status: install ok installed"))
++        #assert all(res)
++
++    def test_step2(self):
++        res = []
++        #upload_files(data.get("ip"), data.get("user"), data.get("passwd"), data.get("local_path"), data.get("remote_path"))
++        res.append(ssh_checkout(data.get("ip"), data.get("user"), data.get("passwd"), f"echo {data.get('passwd')} | sudo -S dpkg -r {data.get('remote_path')}",
++                                "Удаляется"))
++        res.append(ssh_checkout(data.get("ip"), data.get("user"), data.get("passwd"), f"echo {data.get('passwd')} | sudo -S dpkg -s p7zip-full",
++                                "Status: deinstall ok"))
++        assert all(res)
++
++
++
+Index: lesson4/config.yaml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lesson4/config.yaml b/lesson4/config.yaml
+new file mode 100644
+--- /dev/null	(date 1692387347808)
++++ b/lesson4/config.yaml	(date 1692387347808)
+@@ -0,0 +1,12 @@
++folder_in: /home/user/tst
++folder_out: /home/user/out
++folder_ext: /home/user/folder1
++folder_ext2: /home/user/folder2
++count: 5
++bs: 1M
++type: zip
++ip: 0.0.0.0
++user: user2
++passwd: 11
++local_path: /home/user/p7zip-full.deb
++remote_path: /home/user2/p7zip-full.deb
+\ No newline at end of file
+Index: lesson4/deploy_1.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lesson4/deploy_1.py b/lesson4/deploy_1.py
+new file mode 100644
+--- /dev/null	(date 1692389001660)
++++ b/lesson4/deploy_1.py	(date 1692389001660)
+@@ -0,0 +1,18 @@
++from sshcheckers import ssh_checkout, upload_files
++import yaml
++
++with open('config.yaml') as f:
++    # читаем документ YAML
++    data = yaml.safe_load(f)
++
++
++def deploy_2():
++    res = []
++    #upload_files(data.get("ip"), data.get("user"), data.get("passwd"), data.get("local_path"), data.get("remote_path"))
++    res.append(ssh_checkout(data.get("ip"), data.get("user"), data.get("passwd"), f"echo {data.get('passwd')} | sudo -S dpkg -r {data.get('remote_path')}",
++                            "Удаляется"))
++    res.append(ssh_checkout(data.get("ip"), data.get("user"), data.get("passwd"), f"echo {data.get('passwd')} | sudo -S dpkg -s p7zip-full",
++                            "Status: deinstall ok"))
++    return all(res)
++
++print(deploy_2())
+\ No newline at end of file
+Index: lesson4/deploy.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lesson4/deploy.py b/lesson4/deploy.py
+new file mode 100644
+--- /dev/null	(date 1692385467856)
++++ b/lesson4/deploy.py	(date 1692385467856)
+@@ -0,0 +1,15 @@
++from sshcheckers import ssh_checkout, upload_files
++
++def deploy():
++    res = []
++    upload_files("0.0.0.0", "user2", "11", "/home/user/p7zip-full.deb", "/home/user2/p7zip-full.deb")
++    res.append(ssh_checkout("0.0.0.0", "user2", "11", "echo '11' | sudo -S dpkg -i /home/user2/p7zip-full.deb",
++                            "Настраивается пакет"))
++    res.append(ssh_checkout("0.0.0.0", "user2", "11", "echo '11' | sudo -S dpkg -s p7zip-full",
++                            "Status: install ok installed"))
++    return all(res)
++
++if deploy():
++    print("Деплой успешен")
++else:
++    print("Ошибка деплоя")
+\ No newline at end of file
+Index: lesson4/sshcheckers.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lesson4/sshcheckers.py b/lesson4/sshcheckers.py
+new file mode 100644
+--- /dev/null	(date 1692384454432)
++++ b/lesson4/sshcheckers.py	(date 1692384454432)
+@@ -0,0 +1,59 @@
++import paramiko
++
++def ssh_checkout(host, user, passwd, cmd, text, port=22):
++    client = paramiko.SSHClient()
++    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
++    client.connect(hostname=host, username=user, password=passwd, port=port)
++    stdin, stdout, stderr = client.exec_command(cmd)
++    exit_code = stdout.channel.recv_exit_status()
++    out = (stdout.read() + stderr.read()).decode("utf-8")
++    client.close()
++    if text in out and exit_code == 0:
++        return True
++    else:
++        return False
++
++def ssh_getout(host, user, passwd, cmd, port=22):
++    client = paramiko.SSHClient()
++    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
++    client.connect(hostname=host, username=user, password=passwd, port=port)
++    stdin, stdout, stderr = client.exec_command(cmd)
++    out = (stdout.read() + stderr.read()).decode("utf-8")
++    client.close()
++    return out
++
++def upload_files(host, user, passwd, local_path, remote_path, port=22):
++    print(f"Загружаем файл {local_path} в каталог {remote_path}")
++    transport = paramiko.Transport((host, port))
++    transport.connect(None, username=user, password=passwd)
++    sftp = paramiko.SFTPClient.from_transport(transport)
++    sftp.put(local_path, remote_path)
++    if sftp:
++        sftp.close()
++    if transport:
++        transport.close()
++
++def download_files(host, user, passwd, remote_path, local_path, port=22):
++    print(f"Скачиваем файл {remote_path} в каталог {local_path}")
++    transport = paramiko.Transport((host, port))
++    transport.connect(None, username=user, password=passwd)
++    sftp = paramiko.SFTPClient.from_transport(transport)
++    sftp.get(remote_path, local_path)
++    if sftp:
++        sftp.close()
++    if transport:
++        transport.close()
++
++
++def ssh_checkout_negative(host, user, passwd, cmd, text, port=22):
++    client = paramiko.SSHClient()
++    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
++    client.connect(hostname=host, username=user, password=passwd, port=port)
++    stdin, stdout, stderr = client.exec_command(cmd)
++    exit_code = stdout.channel.recv_exit_status()
++    out = (stdout.read() + stderr.read()).decode("utf-8")
++    client.close()
++    if text in out and exit_code != 0:
++        return True
++    else:
++        return False
+\ No newline at end of file
+diff --git a/lesson4/conftest.py b/lesson4/conftest.py
+new file mode 100644
